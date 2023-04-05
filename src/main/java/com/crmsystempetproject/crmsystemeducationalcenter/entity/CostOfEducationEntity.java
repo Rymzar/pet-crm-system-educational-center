@@ -10,12 +10,12 @@ import lombok.Data;
 public class CostOfEducationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "calculation_code")
+    @Column(name = "calculation_code", nullable = false, unique = true)
     private Long calculationCode;
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private int price;
-    @Column(name = "total_cost")
+    @Column(name = "total_cost", nullable = false)
     private int totalCost;
-    @Column(name = "year_of_study")
+    @Column(name = "year_of_study", nullable = false)
     private String yearOfStudy;
 }

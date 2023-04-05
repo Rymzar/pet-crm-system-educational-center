@@ -10,13 +10,13 @@ import lombok.Data;
 public class ItemsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "item_name")
+    @Column(name = "item_name", nullable = false, unique = true)
     private String itemName;
-    @Column(name = "reducation")
+    @Column(name = "reducation", nullable = false)
     private String reduction;
-    @Column(name = "quantity")
+    @Column(name = "quantity", nullable = false)
     private int quantity;
-    @Column(name = "term")
+    @Column(name = "term", nullable = false)
     private int term;
 }
 

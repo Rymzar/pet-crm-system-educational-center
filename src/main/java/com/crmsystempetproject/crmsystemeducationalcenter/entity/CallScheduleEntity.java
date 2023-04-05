@@ -10,8 +10,8 @@ import lombok.Data;
 public class CallScheduleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "number")
+    @Column(name = "number", nullable = false, unique = true)
     private Long number;
-    @Column(name = "time_spending")
+    @Column(name = "time_spending", nullable = false)
     private String timeSpending;
 }
