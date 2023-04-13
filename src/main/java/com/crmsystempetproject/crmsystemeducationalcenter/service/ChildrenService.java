@@ -17,13 +17,14 @@ public class ChildrenService {
         return childrenRepository.findAll();
     }
 
-    public ChildrenEntity getChidrenById(Long id) {
+    public ChildrenEntity getChildrenById(Long id) {
         Optional<ChildrenEntity> children = childrenRepository.findById(id);
         return children.orElse(null);
     }
 
-    public void saveChildren(ChildrenEntity children) {
+    public ChildrenEntity saveChildren(ChildrenEntity children) {
         childrenRepository.save(children);
+        return children;
     }
 
     public void deleteChidrenById(Long id) {
