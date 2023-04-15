@@ -22,8 +22,9 @@ public class ClassesService {
         return classes.orElse(null);
     }
 
-    public void saveClasses(ClassesEntity classes) {
+    public ClassesEntity saveClasses(ClassesEntity classes) {
         classesRepository.save(classes);
+        return classes;
     }
 
     public void deleteClassesById(Long id) {
