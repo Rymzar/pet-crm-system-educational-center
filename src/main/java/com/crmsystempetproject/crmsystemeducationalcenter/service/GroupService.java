@@ -22,8 +22,9 @@ public class GroupService {
         return groups.orElse(null);
     }
 
-    public void saveGroup(GroupsEntity groups) {
+    public GroupsEntity saveGroup(GroupsEntity groups) {
         groupsRepository.save(groups);
+        return groups;
     }
 
     public void deleteGroupByID(Long id) {
