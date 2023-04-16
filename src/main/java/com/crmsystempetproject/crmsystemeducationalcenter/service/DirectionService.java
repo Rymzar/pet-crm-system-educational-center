@@ -23,8 +23,9 @@ public class DirectionService {
         return directions.orElse(null);
     }
 
-    public void saveDirection(DirectionsOfStudiesEntity directions) {
+    public DirectionsOfStudiesEntity saveDirection(DirectionsOfStudiesEntity directions) {
         directionsOfStudiesRepository.save(directions);
+        return directions;
     }
 
     public void deleteDirectionById(Long id) {
